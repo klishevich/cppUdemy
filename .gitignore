@@ -1,3 +1,8 @@
 cpp_test/
 Debug/
 .codelite/
+*.mk
+*.project
+*.txt
+*.workspace
+*Makefile
