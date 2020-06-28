@@ -6,3 +6,4 @@ Debug/
 *.txt
 *.workspace
 *Makefile
+.DS_Store
