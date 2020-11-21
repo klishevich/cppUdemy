@@ -18,9 +18,9 @@ int main( )
             cout << " ";
         int symbols = i + 1;
         for (int j {0}; j<symbols; j++)
-            cout << s0[j];
+            cout << s0.at(j);
         for (int j {symbols-2}; j>=0; j--)
-            cout << s0[j];
+            cout << s0.at(j);
         cout << endl;
     } 
     return 0;
