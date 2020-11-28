@@ -9,7 +9,7 @@ int main( )
     int max {6};
     cout << "RAND_MAX in my system is: " << RAND_MAX << endl;
 //    srand(time(nullptr));
-    
+     
     for (size_t i {1}; i<=count; i++)
     {
         random_number = rand() % max + min; // generate random number [min, max]
