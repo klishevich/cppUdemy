@@ -8,6 +8,7 @@ void add_element(vector<int> &numbers);
 void calc_mean(const vector<int> &numbers);
 void calc_smallest(const vector<int> &numbers);
 void calc_largest(const vector<int> &numbers);
+char get_selection();
 
 int main( )
 {
@@ -16,18 +17,19 @@ int main( )
 
     while (true) {
         print_menu(choice);
-        char choiceL = toupper(choice);
-        if (choiceL == 'Q')
+        choice = get_selection();
+
+        if (choice == 'Q')
             break;
-        if (choiceL == 'P')
+        if (choice == 'P')
             print_elements(numbers);
-        if (choiceL == 'A')
+        if (choice == 'A')
             add_element(numbers);
-        if (choiceL == 'M')
+        if (choice == 'M')
             calc_mean(numbers);
-        if (choiceL == 'S')
+        if (choice == 'S')
             calc_smallest(numbers);
-        if (choiceL == 'L')
+        if (choice == 'L')
             calc_largest(numbers);
         cout << endl;
     }
@@ -45,7 +47,12 @@ void print_menu(char &choice) {
     cout << "Q - Quit" << endl;
     cout << endl;
     cout << "Enter your choice: ";
-    cin >> choice;
+}
+
+char get_selection() {
+    char selection {};
+    cin >> selection;
+    return toupper(selection);
 }
 
 void print_elements(const vector<int> &numbers) {
