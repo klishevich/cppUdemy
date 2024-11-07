@@ -7,3 +7,7 @@ Debug/
 *.workspace
 *Makefile
 .DS_Store
+.DS_Store
+main
+main.exe
+outputf.out
