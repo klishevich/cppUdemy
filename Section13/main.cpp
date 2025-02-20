@@ -1,4 +1,4 @@
-#include "main.h"
+#include "friends.h"
 #include <iostream>
 
 
