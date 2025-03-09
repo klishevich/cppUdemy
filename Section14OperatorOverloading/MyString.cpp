@@ -30,6 +30,30 @@ MyString::~MyString() {
 	delete [] str;
 }
 
+// overloaded copy assignment operator
+MyString &MyString::operator=(const MyString &rhs) {
+	std::cout << "copy assignment " << rhs.str << std::endl;
+	if (this != &rhs) {
+		delete [] str;
+		str = new char[std::strlen(rhs.str) + 1];
+		std::strcpy(str, rhs.str);
+	}
+
+	return *this;
+}
+
+// overloaded move assignment operator
+MyString &MyString::operator=(MyString &&rhs) {
+	std::cout << "move assignment " << rhs.str << std::endl;
+	if (this != &rhs) {
+		delete [] str;
+		str = rhs.str;
+		rhs.str = nullptr;
+	}
+
+	return *this;
+}
+
 void MyString::display() const {
 	std::cout << str << " : " << get_length() << std::endl;
 }

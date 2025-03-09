@@ -10,6 +10,12 @@ public:
     MyString(const char *s);
     MyString(const MyString &source);
     ~MyString();
+
+    // Copy assignment operator
+    MyString &operator=(const MyString &rhs);
+    // Move assignment operator
+    MyString &operator=(MyString &&rhs);
+
     void display() const;
     int get_length() const;
     const char *get_str() const;
